@@ -6,4 +6,9 @@
     </style>
 
     <style name="Theme.CalculadoraIMC" parent="Base.Theme.CalculadoraIMC" />
+
+    <style name="error_appearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#FFEB3B</item>
+        <item name="android:textSize">12sp</item>
+    </style>
 </resources>
