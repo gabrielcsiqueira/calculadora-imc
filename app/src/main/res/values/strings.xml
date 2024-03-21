@@ -1,9 +1,3 @@
 <resources>
     <string name="app_name">calculadora-IMC</string>
-
-    <string-array name="sexo">
-        <item>Feminino</item>
-        <item>Masculino</item>
-        <item>Menine</item>
-    </string-array>
 </resources>

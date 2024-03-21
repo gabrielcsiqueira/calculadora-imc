@@ -11,7 +11,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="16dp"
         app:cardCornerRadius="16dp"
         app:cardBackgroundColor="@color/material_dynamic_primary10">
@@ -58,12 +58,14 @@
                 android:paddingLeft="16dp">
 
                 <RadioGroup
+                    android:id="@+id/radio_group"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:layout_marginTop="16dp">
 
                     <RadioButton
+                        android:id="@+id/radio_feminino"
                         android:layout_width="0dp"
                         android:layout_height="40dp"
                         android:text="Feminino"
@@ -74,6 +76,7 @@
                         android:button="@android:color/transparent"
                         android:gravity="center"/>
                     <RadioButton
+                        android:id="@+id/radio_masculino"
                         android:layout_width="0dp"
                         android:layout_height="40dp"
                         android:text="Masculino"
@@ -86,15 +89,148 @@
 
                 </RadioGroup>
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:text="Idade:"
+                        android:textStyle="bold"
+                        android:layout_gravity="start"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="9dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_branco_esquerda"/>
+
+                    <EditText
+                        android:id="@+id/edit_text_idade"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="end"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_branco_direita"
+                        android:paddingRight="18dp"
+                        android:textAlignment="textEnd"
+                        android:textSize="18sp"
+                        android:inputType="number"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:text="Altura (cm):"
+                        android:textStyle="bold"
+                        android:layout_gravity="start"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="9dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_branco_esquerda"/>
+
+                    <EditText
+                        android:id="@+id/edit_text_altura"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textAlignment="textEnd"
+                        android:paddingRight="18dp"
+                        android:layout_gravity="end"
+                        android:background="@drawable/background_branco_direita"
+                        android:inputType="number"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:text="Peso atual (kg):"
+                        android:textStyle="bold"
+                        android:layout_gravity="start"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="9dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_branco_esquerda"/>
+
+                    <EditText
+                        android:id="@+id/edit_text_peso"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:textSize="18sp"
+                        android:textAlignment="textEnd"
+                        android:paddingRight="18dp"
+                        android:layout_gravity="end"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_branco_direita"
+                        android:inputType="numberDecimal"/>
+
+                </LinearLayout>
 
 
             </LinearLayout>
 
+            <Button
+                android:id="@+id/button_calcular_ncd"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Calcular NCD"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@android:color/holo_blue_dark"/>
+
+            <TextView
+                android:id="@+id/text_resultado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:text="Dica: consuma mais/menos calorias que a sua"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:text="necessidade calórica para emagrecer/engordar."
+                android:layout_marginBottom="20dp"/>
+
         </LinearLayout>
-
-
-
-
 
     </androidx.cardview.widget.CardView>
 
